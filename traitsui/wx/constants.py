@@ -26,7 +26,7 @@ is_dark = wx.SystemSettings.GetAppearance().IsDark()
 DefaultTitle = "Edit properties"
 
 #: Color of valid input
-OKColor = wx.SystemSettings.GetColour(wx.SYS_COLOUR_INFOBK)
+OKColor = wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOW)
 
 #: Color to highlight input errors
 if is_dark:
