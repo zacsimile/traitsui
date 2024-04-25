@@ -26,11 +26,7 @@ is_dark = wx.SystemSettings.GetAppearance().IsDark()
 DefaultTitle = "Edit properties"
 
 #: Color of valid input
-# Alternative: OKColor = wx.SystemSettings.GetColour(wx.SYS_COLOUR_INFOBK)
-if is_dark:
-    OKColor = wx.BLACK
-else:
-    OKColor = wx.WHITE
+OKColor = wx.SystemSettings.GetColour(wx.SYS_COLOUR_INFOBK)
 
 #: Color to highlight input errors
 if is_dark:
@@ -56,13 +52,7 @@ EditableColor = OKColor
 
 #: Color for background of windows (like dialog background color)
 if is_mac:
-    # Alternative: WindowColor = wx.SystemSettings.GetColour(wx.SYS_COLOUR_BACKGROUND)
-    if is_dark:
-        WindowColor = wx.Colour(72, 72, 72)
-        BorderedGroupColor = wx.Colour(64, 64, 64)
-    else:
-        WindowColor = wx.Colour(232, 232, 232)
-        BorderedGroupColor = wx.Colour(224, 224, 224)
+    WindowColor = wx.SystemSettings.GetColour(wx.SYS_COLOUR_WINDOW)
 else:
     WindowColor = wx.SystemSettings.GetColour(wx.SYS_COLOUR_MENUBAR)
 
@@ -70,7 +60,7 @@ else:
 if is_dark:
     TableCellColor = wx.WHITE
 else:
-    TableCellColor = wx.BLACK
+    TableCellColor = wx.Colour(23,23,23)
 
 #: Default colour for table background
 TableCellBackgroundColor = OKColor
@@ -87,12 +77,8 @@ TableLabelBackgroundColor = WindowColor
 #: Default foreground colour for table selection
 TableSelectionTextColor = TableCellColor
 
-#: Default background colour for table selection (light blue)
-# Alternative: wx.SystemSettings.GetColour(wx.SYS_COLOUR_HIGHLIGHT)
-if is_dark:
-    TableSelectionBackgroundColor = wx.Colour(48, 78, 117)
-else:
-    TableSelectionBackgroundColor = wx.Colour(173, 216, 230)
+#: Default background colour for table selection
+TableSelectionBackgroundColor = wx.SystemSettings.GetColour(wx.SYS_COLOUR_HIGHLIGHT)
 
 #: Standard width of an image bitmap
 standard_bitmap_width = 120
