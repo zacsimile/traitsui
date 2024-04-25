@@ -60,7 +60,7 @@ else:
 if is_dark:
     TableCellColor = wx.WHITE
 else:
-    TableCellColor = wx.Colour(23,23,23)
+    TableCellColor = wx.BLACK
 
 #: Default colour for table background
 TableCellBackgroundColor = OKColor
